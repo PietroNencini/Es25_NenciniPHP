@@ -1,0 +1,9 @@
+
+p.error_par {
+    color:red;
+    font-size: larger;
+}
+
+#result_table, tr, td, th {
+    border: black solid 1px;
+}
