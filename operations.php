@@ -12,7 +12,11 @@
     <?php
         $num1 = $_GET["num1"];
         $num2 = $_GET["num2"];
-        if(empty($num1) or empty($num2) ) {
+        $sum = null;
+        $diff = null;
+        $product = null;
+        $quotient = null;
+        if(($num1 !=0 && $num2 != 0) && (empty($num1) or empty($num2))) {
             echo "<p class='error_par'> ERRORE: Non puoi inserire numeri vuoti </p>";
             echo "<a href='index.html'>Torna alla pagina iniziale (e possibilmente inserisci numeri validi) </a>";          
         }
@@ -24,12 +28,10 @@
             $diff = $num1 - $num2;
             $product = $num1 * $num2;
             $quotient = $num2 == 0 ? null : ($num1 / $num2);
-
-
         }
     ?>
 
-    <table id="result_table">
+    <table id="result_table" class="d-block mx-auto p-2">
         <tr>
             <th>Operazione</th>
             <th>Risultato</th>
@@ -39,15 +41,15 @@
             <td><?php echo $sum?></td>
         </tr>
         <tr>
-            <td></td>
+            <td>Differenza</td>
             <td><?php echo $diff?></td>
         </tr>
         <tr>
-            <td></td>
+            <td>Moltiplicazione</td>
             <td><?php echo $product?></td>
         </tr>
         <tr>
-            <td></td>
+            <td>Divisione</td>
             <td><?php echo $quotient == null ? "<p class='error_par'> IMPOSSIBILE </p>" : $quotient ?></td>
         </tr>
     </table>

@@ -1,4 +1,8 @@
 
+input, button {
+    margin: auto 1rem 1rem 1rem;
+}
+
 p.error_par {
     color:red;
     font-size: larger;
@@ -6,4 +10,8 @@ p.error_par {
 
 #result_table, tr, td, th {
     border: black solid 1px;
+}
+
+td, th {
+    padding: 1rem;
 }
